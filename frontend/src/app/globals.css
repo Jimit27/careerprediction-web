@@ -1,0 +1,290 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+label {
+    color: white;
+}
+
+.popup-content {
+    margin: auto;
+    background: rgb(255, 255, 255);
+    width: 50%;
+    padding: 5px;
+}
+.popup-arrow {
+    color: rgb(255, 255, 255);
+}
+[role="tooltip"].popup-content {
+    width: 200px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 0px 3px;
+}
+
+.popup-overlay {
+    background: rgba(0, 0, 0, 0.5);
+}
+[data-popup="tooltip"].popup-overlay {
+    background: transparent;
+}
+
+.example-warper {
+    padding: 20px 5%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    border: 2px var(--ifm-link-color) dashed;
+    margin: 10px;
+    white-space: pre-line;
+}
+
+.example-warper .button,
+.popup-content .button {
+    font-family: "Roboto", Arial, sans-serif;
+    color: #000000;
+    cursor: pointer;
+    padding: 0px 30px;
+    display: inline-block;
+    margin: 10px 15px;
+    text-transform: uppercase;
+    line-height: 2em;
+    letter-spacing: 1.5px;
+    font-size: 1em;
+    outline: none;
+    position: relative;
+    font-size: 14px;
+    border: 3px dashed var(--ifm-link-color);
+    background-color: #ffffff;
+    /* border-radius: 15px 15px 15px 15px; */
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.example-warper .button:hover,
+.example-warper .button.hover {
+    border-color: #2980b9;
+    color: #000000 !important;
+}
+.example-warper .popup-card {
+    font-size: 12px;
+}
+.example-warper .popup-card > .header {
+    width: 100%;
+    border-bottom: 1px solid gray;
+    font-size: 14px;
+    text-align: center;
+}
+.modal {
+    font-size: 12px;
+}
+.modal > .header {
+    width: 100%;
+    border-bottom: 1px solid gray;
+    font-size: 18px;
+    text-align: center;
+    padding: 5px;
+}
+.modal > .content {
+    width: 100%;
+    padding: 10px 5px;
+}
+.modal > .actions {
+    margin: auto;
+}
+.modal > .actions {
+    width: 100%;
+    padding: 10px 5px;
+    text-align: center;
+}
+
+.modal > .close {
+    cursor: pointer;
+    position: absolute;
+    display: block;
+    padding: 2px 5px;
+    right: -10px;
+    top: -10px;
+    font-size: 24px;
+    border-radius: 18px;
+    border: 1px solid #cfcece;
+    background-color: #fff;
+}
+.example-warper .example-warper-start {
+    width: 100%;
+    padding: 20px 5%;
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px #cfcece dashed;
+}
+.popup-menu {
+    display: flex;
+    flex-direction: column;
+    padding: 0px !important;
+}
+
+.popup-menu .menu-item {
+    cursor: pointer;
+    padding: 5px;
+}
+.popup-menu .menu-item:not(:first-child) {
+    border-top: 1px solid #e8e7e7;
+}
+html[data-theme="dark"] .menu-item:not(:first-child) {
+    border-top: 1px solid grey;
+}
+
+.popup-menu .menu-item:hover {
+    color: #2980b9;
+}
+
+.popup-content {
+    border-radius: 5px;
+    padding: 0.5rem;
+}
+
+/* a[href],
+area[href],
+input:not([disabled]),
+select:not([disabled]),
+textarea:not([disabled]), */
+
+button:not([disabled]):focus-within {
+    border: 2px solid #2196f3;
+}
+
+html[data-theme="dark"] .popup-content {
+    background-color: rgb(41, 45, 62);
+    color: #fff;
+    border: 1px solid #464545;
+}
+
+html[data-theme="light"] .popup-content {
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #d7d7d7;
+}
+
+html[data-theme="dark"] .popup-arrow {
+    filter: drop-shadow(0 -3px 3px rgba(0, 0, 0, 0.16));
+    color: rgb(41, 45, 62);
+    stroke-width: 2px;
+    stroke: #464545;
+    stroke-dasharray: 30px;
+    stroke-dashoffset: -54px;
+}
+
+html[data-theme="light"] .popup-arrow {
+    filter: drop-shadow(0 -3px 3px rgba(0, 0, 0, 0.16));
+    color: #fff;
+    stroke-width: 2px;
+    stroke: #d7d7d7;
+    stroke-dasharray: 30px;
+    stroke-dashoffset: -54px;
+}
+
+/* animation */
+
+@keyframes anvil {
+    0% {
+        transform: scale(1) translateY(0px);
+        opacity: 0;
+        box-shadow: 0 0 0 rgba(241, 241, 241, 0);
+    }
+    1% {
+        transform: scale(0.96) translateY(10px);
+        opacity: 0;
+        box-shadow: 0 0 0 rgba(241, 241, 241, 0);
+    }
+    100% {
+        transform: scale(1) translateY(0px);
+        opacity: 1;
+        box-shadow: 0 0 500px rgba(241, 241, 241, 0);
+    }
+}
+.popup-content {
+    -webkit-animation: anvil 0.3s cubic-bezier(0.38, 0.1, 0.36, 0.9) forwards;
+}
+
+input[type="checkbox"] {
+    border: 1px solid black;
+    height: 20px;
+    width: 20px;
+}
+@layer base {
+    :root {
+        --background: 0 0% 100%;
+        --foreground: 224 71.4% 4.1%;
+
+        --card: 0 0% 100%;
+        --card-foreground: 224 71.4% 4.1%;
+
+        --popover: 0 0% 100%;
+        --popover-foreground: 224 71.4% 4.1%;
+
+        --primary: 220.9 39.3% 11%;
+        --primary-foreground: 210 20% 98%;
+
+        --secondary: 220 14.3% 95.9%;
+        --secondary-foreground: 220.9 39.3% 11%;
+
+        --muted: 220 14.3% 95.9%;
+        --muted-foreground: 220 8.9% 46.1%;
+
+        --accent: 220 14.3% 95.9%;
+        --accent-foreground: 220.9 39.3% 11%;
+
+        --destructive: 0 84.2% 60.2%;
+        --destructive-foreground: 210 20% 98%;
+
+        --border: 220 13% 91%;
+        --input: 220 13% 91%;
+        --ring: 224 71.4% 4.1%;
+
+        --radius: 0.5rem;
+    }
+
+    .dark {
+        --background: 224 71.4% 4.1%;
+        --foreground: 210 20% 98%;
+
+        --card: 224 71.4% 4.1%;
+        --card-foreground: 210 20% 98%;
+
+        --popover: 224 71.4% 4.1%;
+        --popover-foreground: 210 20% 98%;
+
+        --primary: 210 20% 98%;
+        --primary-foreground: 220.9 39.3% 11%;
+
+        --secondary: 215 27.9% 16.9%;
+        --secondary-foreground: 210 20% 98%;
+
+        --muted: 215 27.9% 16.9%;
+        --muted-foreground: 217.9 10.6% 64.9%;
+
+        --accent: 215 27.9% 16.9%;
+        --accent-foreground: 210 20% 98%;
+
+        --destructive: 0 62.8% 30.6%;
+        --destructive-foreground: 210 20% 98%;
+
+        --border: 215 27.9% 16.9%;
+        --input: 215 27.9% 16.9%;
+        --ring: 216 12.2% 83.9%;
+    }
+}
+
+@layer base {
+    * {
+        @apply border-border;
+    }
+    body {
+        @apply bg-background text-foreground;
+    }
+}
+
+.MuiSlider-markLabelActive {
+    color: white !important;
+}
+
+.MuiSlider-markLabel {
+    color: white !important;
+}

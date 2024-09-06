@@ -1,0 +1,17 @@
+credentials:
+  usernames:
+    naveen:
+      email: naveeng2711@gmail.com
+      name: Naveen G
+      password: $2b$12$LmFEa9kf0jYT12JEELlHK./gGknw1GRFvkiThdzW6S891plIt0D2O # To be replaced with hashed password
+    jimit:
+      email: jimit.sanghavi2727@gmail.com
+      name: Jimit Sanghavi
+      password: $2b$12$yHQopIrC5mzSIuCuUpFZweV6EeE3oOpx17Tjm4u9V79j2Pa040X5i # To be replaced with hashed password
+cookie:
+  expiry_days: 30
+  key: random_signature_key # Must be string
+  name: random_cookie_name
+preauthorized:
+  emails:
+    - jimit.sanghavi2727@gmail.com
