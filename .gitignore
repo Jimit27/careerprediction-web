@@ -5,3 +5,9 @@
 *.sh
 /__pycache__
 env
+
+# Local secrets and data
+config.yaml
+*.db
+.DS_Store
+node_modules/

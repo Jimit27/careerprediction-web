@@ -1,0 +1,12 @@
+credentials:
+  usernames:
+    example_user:
+      email: user@example.com
+      name: Example User
+      password: "<bcrypt hash generated with streamlit_authenticator.Hasher>"
+cookie:
+  expiry_days: 30
+  key: "<random string>"
+  name: career_app_auth
+preauthorized:
+  emails: []
